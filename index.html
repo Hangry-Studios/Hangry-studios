@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hangry Productions - Roblox Game Studio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #e63946;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background-color: #2a2a2a;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    footer {
+      background-color: #2a2a2a;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #999;
+    }
+    a.game-link {
+      color: #fcbf49;
+      text-decoration: none;
+    }
+    #language-selector {
+      margin-top: 1rem;
+    }
+    select {
+      padding: 0.3rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+  <script>
+    const translations = {
+      en: {
+        title: "Hangry Productions - Roblox Game Studio",
+        subtitle: "Roblox Game Development Studio",
+        about: "About Us",
+        games: "Our Games",
+        contact: "Contact",
+        teamTitle: "Our Team",
+        aboutText: "Hangry Productions is an independent Roblox game development studio focused on delivering high-quality, immersive, and entertaining experiences for players around the world. Founded by a group of passionate developers and gamers, we strive to bring creativity, originality, and innovation to every game we create.",
+        aboutText2: "Our mission is to make games that are not only fun to play but also memorable, replayable, and built with the community in mind. Whether you're climbing the highest peaks, building empires, or escaping chaotic traps, our games aim to keep you engaged and wanting more.",
+        aboutText3: "We value feedback, collaboration, and continuous improvement. Every update and feature we release is influenced by what our players love and ask for. At Hangry Productions, your experience is our top priority.",
+        gameTitle: "Untitled Climbing Game",
+        gameDesc: "A thrilling vertical adventure where players race to the top through challenging obstacles and intense environments.",
+        play: "Play on Roblox",
+        contactText: "Want to collaborate, give feedback, or just say hi? Reach out to us at:"
+      },
+      sv: {
+        title: "Hangry Productions - Roblox Spelstudio",
+        subtitle: "Roblox spelutvecklingsstudio",
+        about: "Om Oss",
+        games: "Våra Spel",
+        contact: "Kontakt",
+        teamTitle: "Vårt Team",
+        aboutText: "Hangry Productions är en oberoende Roblox-studio som fokuserar på att skapa högkvalitativa, engagerande och underhållande spelupplevelser för spelare över hela världen. Vi grundades av passionerade utvecklare och spelare och strävar efter kreativitet, originalitet och innovation i varje spel vi skapar.",
+        aboutText2: "Vårt mål är att göra spel som inte bara är roliga att spela, utan också minnesvärda, återspelbara och byggda med communityn i fokus. Oavsett om du klättrar till toppen, bygger imperier eller flyr kaos, så vill vi att du ska ha kul.",
+        aboutText3: "Vi värdesätter feedback, samarbete och ständig förbättring. Varje uppdatering och funktion vi släpper bygger på vad våra spelare tycker om. Din upplevelse är vår högsta prioritet.",
+        gameTitle: "Untitled Climbing Game",
+        gameDesc: "Ett spännande klättringsäventyr där spelare tävlar mot varandra genom utmanande hinder och intensiva miljöer.",
+        play: "Spela på Roblox",
+        contactText: "Vill du samarbeta, ge feedback eller bara säga hej? Kontakta oss på:"
+      },
+      de: {
+        title: "Hangry Productions - Roblox Spielstudio",
+        subtitle: "Roblox Spieleentwicklungsstudio",
+        about: "Über Uns",
+        games: "Unsere Spiele",
+        contact: "Kontakt",
+        teamTitle: "Unser Team",
+        aboutText: "Hangry Productions ist ein unabhängiges Roblox-Entwicklungsstudio, das sich auf hochwertige, fesselnde und unterhaltsame Spielerlebnisse für Menschen weltweit konzentriert. Gegründet von leidenschaftlichen Entwicklern und Spielern, setzen wir auf Kreativität, Originalität und Innovation.",
+        aboutText2: "Unsere Mission ist es, Spiele zu schaffen, die nicht nur Spaß machen, sondern auch unvergesslich und wieder spielbar sind – mit der Community im Mittelpunkt. Ob beim Klettern, Bauen oder Entkommen – unsere Spiele sollen fesseln.",
+        aboutText3: "Wir schätzen Feedback, Zusammenarbeit und ständige Verbesserung. Jede Funktion basiert auf dem, was unsere Spieler sich wünschen. Eure Spielerfahrung hat für uns oberste Priorität.",
+        gameTitle: "Untitled Climbing Game",
+        gameDesc: "Ein spannendes Kletterspiel, bei dem Spieler durch herausfordernde Hindernisse und intensive Umgebungen an die Spitze gelangen.",
+        play: "Spielen auf Roblox",
+        contactText: "Möchten Sie zusammenarbeiten, Feedback geben oder einfach Hallo sagen? Kontaktieren Sie uns unter:"
+      },
+      ru: {
+        title: "Hangry Productions - Студия игр Roblox",
+        subtitle: "Студия по разработке игр Roblox",
+        about: "О Нас",
+        games: "Наши Игры",
+        contact: "Контакты",
+        teamTitle: "Наша Команда",
+        aboutText: "Hangry Productions — независимая студия разработки игр для Roblox, создающая качественные, захватывающие и развлекательные проекты для игроков по всему миру. Основана командой увлечённых разработчиков и игроков.",
+        aboutText2: "Наша цель — делать игры, которые не только интересны, но и запоминаются, к которым хочется возвращаться. Мы создаём с учётом пожеланий сообщества.",
+        aboutText3: "Мы ценим обратную связь, сотрудничество и постоянное развитие. Все наши обновления основаны на том, что важно игрокам. Ваш игровой опыт — наш приоритет.",
+        gameTitle: "Безымянная игра про лазание",
+        gameDesc: "Увлекательное вертикальное приключение, в котором игроки преодолевают препятствия и сложные условия на пути к вершине.",
+        play: "Играть на Roblox",
+        contactText: "Хотите сотрудничать, оставить отзыв или просто поздороваться? Напишите нам:"
+      }
+    };
+ 
+    function changeLanguage(lang) {
+      const t = translations[lang];
+      document.title = t.title;
+      document.getElementById('subtitle').innerText = t.subtitle;
+      document.getElementById('nav-about').innerText = t.about;
+      document.getElementById('nav-games').innerText = t.games;
+      document.getElementById('nav-contact').innerText = t.contact;
+      document.getElementById('about-title').innerText = t.about;
+      document.getElementById('about-text').innerText = t.aboutText;
+      document.getElementById('about-text2').innerText = t.aboutText2;
+      document.getElementById('about-text3').innerText = t.aboutText3;
+      document.getElementById('games-title').innerText = t.games;
+      document.getElementById('game-name').innerText = t.gameTitle;
+      document.getElementById('game-desc').innerText = t.gameDesc;
+      document.getElementById('play-link').innerText = t.play;
+      document.getElementById('contact-title').innerText = t.contact;
+      document.getElementById('contact-text').innerText = t.contactText;
+      document.getElementById('team-title').innerText = t.teamTitle;
+    }
+ 
+    window.onload = () => changeLanguage('en');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Hangry Productions</h1>
+    <p id="subtitle">Roblox Game Development Studio</p>
+    <div id="language-selector">
+      <label for="lang" style="color:white;">Language:</label>
+      <select id="lang" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="sv">Svenska</option>
+        <option value="de">Deutsch</option>
+        <option value="ru">Русский</option>
+      </select>
+    </div>
+  </header>
+ 
+  <nav>
+    <a href="#about" id="nav-about">About Us</a>
+    <a href="#games" id="nav-games">Our Games</a>
+    <a href="#contact" id="nav-contact">Contact</a>
+  </nav>
+ 
+  <main>
+    <section id="about">
+      <h2 id="about-title">About Us</h2>
+      <p id="about-text"></p>
+      <p id="about-text2"></p>
+      <p id="about-text3"></p>
+    </section>
+ 
+    <section id="team">
+      <h2 id="team-title">Our Team</h2>
+      <ul id="team-list">
+        <li>
+          <a href="https://www.roblox.com/users/1253021751/profile" target="_blank" style="color: #fcbf49;">
+            <strong>Hungry</strong>
+          </a> – Founder & Lead Developer
+        </li>
+        <li>
+          <a href="https://www.roblox.com/users/1969479094/profile" target="_blank" style="color: #fcbf49;">
+            <strong>Bill</strong>
+          </a> – Music and Logo designer
+        </li>
+      </ul>
+    </section>
+ 
+    <section id="games">
+      <h2 id="games-title">Our Games</h2>
+      <ul>
+        <li>
+          <strong id="game-name">Untitled Climbing Game:</strong>
+          <span id="game-desc"></span><br/>
+          <a class="game-link" id="play-link" href="https://www.roblox.com/games/82598569363062/Untitled-Climbing-game" target="_blank">Play on Roblox</a>
+        </li>
+      </ul>
+    </section>
+ 
+    <section id="contact">
+      <h2 id="contact-title">Contact</h2>
+      <p id="contact-text"></p>
+      <p><a href="mailto:hangryproductions@roblox.dev" style="color:#e63946;">hangryproductions@roblox.dev</a></p>
+    </section>
+  </main>
+ 
+  <footer>
+    &copy; 2025 Hangry Productions. All rights reserved.
+  </footer>
+</body>
+</html>
+ 
