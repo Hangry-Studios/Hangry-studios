@@ -73,6 +73,7 @@
         about: "About Us",
         games: "Our Games",
         contact: "Contact",
+        extensions: "Browser Extensions",
         teamTitle: "Our Team",
         aboutText: "Hangry Productions is an independent Roblox game development studio focused on delivering high-quality, immersive, and entertaining experiences for players around the world. Founded by a group of passionate developers and gamers, we strive to bring creativity, originality, and innovation to every game we create.",
         aboutText2: "Our mission is to make games that are not only fun to play but also memorable, replayable, and built with the community in mind. Whether you're climbing the highest peaks, building empires, or escaping chaotic traps, our games aim to keep you engaged and wanting more.",
@@ -80,7 +81,8 @@
         gameTitle: "Untitled Climbing Game",
         gameDesc: "A thrilling vertical adventure where players race to the top through challenging obstacles and intense environments.",
         play: "Play on Roblox",
-        contactText: "Want to collaborate, give feedback, or just say hi? Reach out to us at:"
+        contactText: "Want to collaborate, give feedback, or just say hi? Reach out to us at:",
+        extensionsText: "Explore our Firefox browser extensions published on Mozilla Add-ons:"
       },
       sv: {
         title: "Hangry Productions - Roblox Spelstudio",
@@ -88,6 +90,7 @@
         about: "Om Oss",
         games: "Våra Spel",
         contact: "Kontakt",
+        extensions: "Webbläsartillägg",
         teamTitle: "Vårt Team",
         aboutText: "Hangry Productions är en oberoende Roblox-studio som fokuserar på att skapa högkvalitativa, engagerande och underhållande spelupplevelser för spelare över hela världen. Vi grundades av passionerade utvecklare och spelare och strävar efter kreativitet, originalitet och innovation i varje spel vi skapar.",
         aboutText2: "Vårt mål är att göra spel som inte bara är roliga att spela, utan också minnesvärda, återspelbara och byggda med communityn i fokus. Oavsett om du klättrar till toppen, bygger imperier eller flyr kaos, så vill vi att du ska ha kul.",
@@ -95,37 +98,8 @@
         gameTitle: "Untitled Climbing Game",
         gameDesc: "Ett spännande klättringsäventyr där spelare tävlar mot varandra genom utmanande hinder och intensiva miljöer.",
         play: "Spela på Roblox",
-        contactText: "Vill du samarbeta, ge feedback eller bara säga hej? Kontakta oss på:"
-      },
-      de: {
-        title: "Hangry Productions - Roblox Spielstudio",
-        subtitle: "Roblox Spieleentwicklungsstudio",
-        about: "Über Uns",
-        games: "Unsere Spiele",
-        contact: "Kontakt",
-        teamTitle: "Unser Team",
-        aboutText: "Hangry Productions ist ein unabhängiges Roblox-Entwicklungsstudio, das sich auf hochwertige, fesselnde und unterhaltsame Spielerlebnisse für Menschen weltweit konzentriert. Gegründet von leidenschaftlichen Entwicklern und Spielern, setzen wir auf Kreativität, Originalität und Innovation.",
-        aboutText2: "Unsere Mission ist es, Spiele zu schaffen, die nicht nur Spaß machen, sondern auch unvergesslich und wieder spielbar sind – mit der Community im Mittelpunkt. Ob beim Klettern, Bauen oder Entkommen – unsere Spiele sollen fesseln.",
-        aboutText3: "Wir schätzen Feedback, Zusammenarbeit und ständige Verbesserung. Jede Funktion basiert auf dem, was unsere Spieler sich wünschen. Eure Spielerfahrung hat für uns oberste Priorität.",
-        gameTitle: "Untitled Climbing Game",
-        gameDesc: "Ein spannendes Kletterspiel, bei dem Spieler durch herausfordernde Hindernisse und intensive Umgebungen an die Spitze gelangen.",
-        play: "Spielen auf Roblox",
-        contactText: "Möchten Sie zusammenarbeiten, Feedback geben oder einfach Hallo sagen? Kontaktieren Sie uns unter:"
-      },
-      ru: {
-        title: "Hangry Productions - Студия игр Roblox",
-        subtitle: "Студия по разработке игр Roblox",
-        about: "О Нас",
-        games: "Наши Игры",
-        contact: "Контакты",
-        teamTitle: "Наша Команда",
-        aboutText: "Hangry Productions — независимая студия разработки игр для Roblox, создающая качественные, захватывающие и развлекательные проекты для игроков по всему миру. Основана командой увлечённых разработчиков и игроков.",
-        aboutText2: "Наша цель — делать игры, которые не только интересны, но и запоминаются, к которым хочется возвращаться. Мы создаём с учётом пожеланий сообщества.",
-        aboutText3: "Мы ценим обратную связь, сотрудничество и постоянное развитие. Все наши обновления основаны на том, что важно игрокам. Ваш игровой опыт — наш приоритет.",
-        gameTitle: "Безымянная игра про лазание",
-        gameDesc: "Увлекательное вертикальное приключение, в котором игроки преодолевают препятствия и сложные условия на пути к вершине.",
-        play: "Играть на Roblox",
-        contactText: "Хотите сотрудничать, оставить отзыв или просто поздороваться? Напишите нам:"
+        contactText: "Vill du samarbeta, ge feedback eller bara säga hej? Kontakta oss på:",
+        extensionsText: "Utforska våra Firefox-tillägg publicerade på Mozilla Add-ons:"
       }
     };
  
@@ -136,6 +110,7 @@
       document.getElementById('nav-about').innerText = t.about;
       document.getElementById('nav-games').innerText = t.games;
       document.getElementById('nav-contact').innerText = t.contact;
+      document.getElementById('nav-extensions').innerText = t.extensions;
       document.getElementById('about-title').innerText = t.about;
       document.getElementById('about-text').innerText = t.aboutText;
       document.getElementById('about-text2').innerText = t.aboutText2;
@@ -146,6 +121,8 @@
       document.getElementById('play-link').innerText = t.play;
       document.getElementById('contact-title').innerText = t.contact;
       document.getElementById('contact-text').innerText = t.contactText;
+      document.getElementById('extensions-title').innerText = t.extensions;
+      document.getElementById('extensions-text').innerText = t.extensionsText;
       document.getElementById('team-title').innerText = t.teamTitle;
     }
  
@@ -161,8 +138,6 @@
       <select id="lang" onchange="changeLanguage(this.value)">
         <option value="en">English</option>
         <option value="sv">Svenska</option>
-        <option value="de">Deutsch</option>
-        <option value="ru">Русский</option>
       </select>
     </div>
   </header>
@@ -170,6 +145,7 @@
   <nav>
     <a href="#about" id="nav-about">About Us</a>
     <a href="#games" id="nav-games">Our Games</a>
+    <a href="#extensions" id="nav-extensions">Browser Extensions</a>
     <a href="#contact" id="nav-contact">Contact</a>
   </nav>
  
@@ -180,21 +156,15 @@
       <p id="about-text2"></p>
       <p id="about-text3"></p>
     </section>
- 
-    <section id="team">
-      <h2 id="team-title">Our Team</h2>
-      <ul id="team-list">
-        <li>
-          <a href="https://www.roblox.com/users/1253021751/profile" target="_blank" style="color: #fcbf49;">
-            <strong>Hungry</strong>
-          </a> – Founder & Lead Developer
-        </li>
-        <li>
-          <a href="https://www.roblox.com/users/1969479094/profile" target="_blank" style="color: #fcbf49;">
-            <strong>Bill</strong>
-          </a> – Music and Logo designer
-        </li>
-      </ul>
+
+    <section id="extensions">
+      <h2 id="extensions-title">Browser Extensions</h2>
+      <p id="extensions-text"></p>
+      <p>
+        <a href="https://addons.mozilla.org/en-US/firefox/user/19531172/" target="_blank" style="color: #fcbf49; font-weight: bold;">
+          View my Add-ons on Mozilla AMO →
+        </a>
+      </p>
     </section>
  
     <section id="games">
@@ -220,4 +190,3 @@
   </footer>
 </body>
 </html>
- 
