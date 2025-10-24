@@ -5,64 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hangry Productions - Roblox Game Studio</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
       font-family: Arial, sans-serif;
       background-color: #1c1c1c;
       color: #f5f5f5;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
     }
     header {
       background-color: #e63946;
-      padding: 1rem;
-      text-align: center;
+      padding: 1rem; text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+    header h1 { margin: 0; font-size: 2.5rem; }
     nav {
       background-color: #2a2a2a;
-      padding: 0.5rem;
-      text-align: center;
+      padding: 0.5rem; text-align: center;
     }
     nav a {
       color: #f5f5f5;
       text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
+      margin: 0 1rem; font-weight: bold;
     }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
+    main { padding: 2rem; max-width: 900px; margin: auto; }
+    section { margin-bottom: 2rem; }
     footer {
       background-color: #2a2a2a;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #999;
+      padding: 1rem; font-size: 0.9rem; color: #999;
     }
-    a.game-link {
-      color: #fcbf49;
-      text-decoration: none;
-    }
-    #language-selector {
-      margin-top: 1rem;
-    }
+    a.game-link { color: #fcbf49; text-decoration: none; }
+    #language-selector { margin-top: 1rem; }
     select {
-      padding: 0.3rem;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
+      padding: 0.3rem; background-color: #333; color: #fff;
+      border: none; border-radius: 5px;
     }
   </style>
   <script>
@@ -75,14 +50,19 @@
         contact: "Contact",
         extensions: "Browser Extensions",
         teamTitle: "Our Team",
-        aboutText: "Hangry Productions is an independent Roblox game development studio focused on delivering high-quality, immersive, and entertaining experiences for players around the world. Founded by a group of passionate developers and gamers, we strive to bring creativity, originality, and innovation to every game we create.",
-        aboutText2: "Our mission is to make games that are not only fun to play but also memorable, replayable, and built with the community in mind. Whether you're climbing the highest peaks, building empires, or escaping chaotic traps, our games aim to keep you engaged and wanting more.",
-        aboutText3: "We value feedback, collaboration, and continuous improvement. Every update and feature we release is influenced by what our players love and ask for. At Hangry Productions, your experience is our top priority.",
+        aboutText: "Hangry Productions is an independent Roblox game development studio focused on delivering high-quality, immersive, and entertaining experiences for players around the world.",
+        aboutText2: "Our mission is to make games that are not only fun but also memorable, replayable, and community-driven.",
+        aboutText3: "We value feedback, collaboration, and continuous improvement. Your experience is our top priority.",
         gameTitle: "Untitled Climbing Game",
-        gameDesc: "A thrilling vertical adventure where players race to the top through challenging obstacles and intense environments.",
+        gameDesc: "A thrilling vertical adventure through challenging environments.",
         play: "Play on Roblox",
-        contactText: "Want to collaborate, give feedback, or just say hi? Reach out to us at:",
-        extensionsText: "Explore our Firefox browser extensions published on Mozilla Add-ons:"
+        contactText: "Want to collaborate or say hi? Reach out to us at:",
+        extensionsText: "Explore our Firefox and Chrome extensions below:",
+        guideTitle: "Installation Guide",
+        guideFirefox: "To install on Firefox, click the button below and select 'Add to Firefox'.",
+        guideChrome: "To install on Chrome, download the ZIP, extract it, open chrome://extensions, enable Developer Mode, click 'Load unpacked', and select the folder. Note: This extension is not on the Chrome Web Store due to its free distribution model, but you can install it manually.",
+        firefoxLink: "Install on Firefox →",
+        chromeLink: "Install on Chrome →"
       },
       sv: {
         title: "Hangry Productions - Roblox Spelstudio",
@@ -92,17 +72,22 @@
         contact: "Kontakt",
         extensions: "Webbläsartillägg",
         teamTitle: "Vårt Team",
-        aboutText: "Hangry Productions är en oberoende Roblox-studio som fokuserar på att skapa högkvalitativa, engagerande och underhållande spelupplevelser för spelare över hela världen. Vi grundades av passionerade utvecklare och spelare och strävar efter kreativitet, originalitet och innovation i varje spel vi skapar.",
-        aboutText2: "Vårt mål är att göra spel som inte bara är roliga att spela, utan också minnesvärda, återspelbara och byggda med communityn i fokus. Oavsett om du klättrar till toppen, bygger imperier eller flyr kaos, så vill vi att du ska ha kul.",
-        aboutText3: "Vi värdesätter feedback, samarbete och ständig förbättring. Varje uppdatering och funktion vi släpper bygger på vad våra spelare tycker om. Din upplevelse är vår högsta prioritet.",
+        aboutText: "Hangry Productions är en oberoende Roblox-studio som fokuserar på att skapa högkvalitativa och engagerande spelupplevelser för spelare över hela världen.",
+        aboutText2: "Vårt mål är att göra spel som inte bara är roliga utan också minnesvärda, återspelbara och byggda med communityn i fokus.",
+        aboutText3: "Vi värdesätter feedback, samarbete och ständig förbättring. Din upplevelse är vår högsta prioritet.",
         gameTitle: "Untitled Climbing Game",
-        gameDesc: "Ett spännande klättringsäventyr där spelare tävlar mot varandra genom utmanande hinder och intensiva miljöer.",
+        gameDesc: "Ett spännande klättringsäventyr genom utmanande miljöer.",
         play: "Spela på Roblox",
-        contactText: "Vill du samarbeta, ge feedback eller bara säga hej? Kontakta oss på:",
-        extensionsText: "Utforska våra Firefox-tillägg publicerade på Mozilla Add-ons:"
+        contactText: "Vill du samarbeta eller bara säga hej? Kontakta oss på:",
+        extensionsText: "Utforska våra Firefox- och Chrome-tillägg nedan:",
+        guideTitle: "Installationsguide",
+        guideFirefox: "För att installera på Firefox, klicka på knappen nedan och välj 'Lägg till i Firefox'.",
+        guideChrome: "För att installera på Chrome, ladda ner ZIP-filen, extrahera den, öppna chrome://extensions, aktivera utvecklarläge, klicka på 'Ladda upp okomprimerat' och välj mappen. Observera: Detta tillägg finns inte på Chrome Web Store på grund av fri distribution, men kan installeras manuellt.",
+        firefoxLink: "Installera på Firefox →",
+        chromeLink: "Installera på Chrome →"
       }
     };
- 
+
     function changeLanguage(lang) {
       const t = translations[lang];
       document.title = t.title;
@@ -123,9 +108,13 @@
       document.getElementById('contact-text').innerText = t.contactText;
       document.getElementById('extensions-title').innerText = t.extensions;
       document.getElementById('extensions-text').innerText = t.extensionsText;
-      document.getElementById('team-title').innerText = t.teamTitle;
+      document.getElementById('guide-title').innerText = t.guideTitle;
+      document.getElementById('guide-firefox').innerText = t.guideFirefox;
+      document.getElementById('guide-chrome').innerText = t.guideChrome;
+      document.getElementById('firefox-link').innerText = t.firefoxLink;
+      document.getElementById('chrome-link').innerText = t.chromeLink;
     }
- 
+
     window.onload = () => changeLanguage('en');
   </script>
 </head>
@@ -141,14 +130,14 @@
       </select>
     </div>
   </header>
- 
+
   <nav>
     <a href="#about" id="nav-about">About Us</a>
     <a href="#games" id="nav-games">Our Games</a>
     <a href="#extensions" id="nav-extensions">Browser Extensions</a>
     <a href="#contact" id="nav-contact">Contact</a>
   </nav>
- 
+
   <main>
     <section id="about">
       <h2 id="about-title">About Us</h2>
@@ -160,13 +149,17 @@
     <section id="extensions">
       <h2 id="extensions-title">Browser Extensions</h2>
       <p id="extensions-text"></p>
-      <p>
-        <a href="https://addons.mozilla.org/en-US/firefox/user/19531172/" target="_blank" style="color: #fcbf49; font-weight: bold;">
-          View my Add-ons on Mozilla AMO →
-        </a>
-      </p>
+
+      <section id="guide">
+        <h3 id="guide-title">Installation Guide</h3>
+        <p id="guide-firefox"></p>
+        <p><a id="firefox-link" href="https://addons.mozilla.org/en-US/firefox/user/19531172/" target="_blank" style="color: #fcbf49; font-weight: bold;">Install on Firefox →</a></p>
+
+        <p id="guide-chrome"></p>
+        <p><a id="chrome-link" href="https://github.com/Hangry-Studios/ChromeExtension/releases/latest" target="_blank" style="color: #fcbf49; font-weight: bold;">Install on Chrome →</a></p>
+      </section>
     </section>
- 
+
     <section id="games">
       <h2 id="games-title">Our Games</h2>
       <ul>
@@ -177,14 +170,14 @@
         </li>
       </ul>
     </section>
- 
+
     <section id="contact">
       <h2 id="contact-title">Contact</h2>
       <p id="contact-text"></p>
       <p><a href="mailto:thisisanaltforutube@gmail.com" style="color:#e63946;">thisisanaltforutube@gmail.com</a></p>
     </section>
   </main>
- 
+
   <footer>
     &copy; 2025 Hangry Productions. All rights reserved.
   </footer>
